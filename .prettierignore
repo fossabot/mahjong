@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+
+# compiled output
+dist
+
+# testing
+coverage
+
+# next.js
+.next
+
+# misc
+pnpm-lock.yaml
+
+# turbo
+.turbo
