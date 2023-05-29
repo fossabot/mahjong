@@ -22,5 +22,9 @@
     "turbo": "^1.9.7"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "mahjong"
+  "name": "mahjong",
+  "engines": {
+    "node": "^18.16.0",
+    "pnpm": "^7.15.0"
+  }
 }
