@@ -63,6 +63,9 @@ importers:
       '@mahjong/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
+      '@mahjong/tsconfig':
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
       '@types/node':
         specifier: ^17.0.12
         version: 17.0.45
@@ -72,9 +75,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.0.7
         version: 18.2.3
-      tsconfig:
-        specifier: workspace:*
-        version: link:../../packages/tsconfig
       typescript:
         specifier: ^4.5.3
         version: 4.9.5
@@ -97,6 +97,9 @@ importers:
       '@mahjong/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
+      '@mahjong/tsconfig':
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
       '@types/node':
         specifier: ^17.0.12
         version: 17.0.45
@@ -106,9 +109,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.0.7
         version: 18.2.3
-      tsconfig:
-        specifier: workspace:*
-        version: link:../../packages/tsconfig
       typescript:
         specifier: ^4.5.3
         version: 4.9.5
@@ -135,6 +135,9 @@ importers:
       '@mahjong/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      '@mahjong/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
       '@types/react':
         specifier: ^18.2.0
         version: 18.2.5
@@ -147,9 +150,6 @@ importers:
       react:
         specifier: ^17.0.2
         version: 17.0.2
-      tsconfig:
-        specifier: workspace:*
-        version: link:../tsconfig
       typescript:
         specifier: ^4.5.2
         version: 4.9.5
