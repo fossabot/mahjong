@@ -40,7 +40,44 @@ jobs:
           command: |
             pnpm run lint
 
+  test:
+    docker:
+      - image: cimg/node:18.16.0-browsers
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          name: Restore pnpm Package Cache
+          keys:
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+
+      - run:
+          name: Install pnpm package manager
+          command: |
+            sudo corepack enable
+            sudo corepack prepare pnpm@latest-8 --activate
+
+      - run:
+          name: Install Dependencies
+          command: |
+            pnpm install --frozen-lockfile
+
+      - save_cache:
+          name: Save pnpm Package Cache
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+          paths:
+            - node_modules
+
+      - run:
+          name: Run Unit Test
+          command: |
+            pnpm run test -- --ci --runInBand
+
 workflows:
   main:
     jobs:
       - lint
+      - test:
+          requires:
+            - lint
