@@ -1,9 +1,13 @@
 version: 2.1
 
-jobs:
-  lint:
+executors:
+  base:
     docker:
       - image: cimg/node:18.16.0-browsers
+
+jobs:
+  lint:
+    executor: base
 
     steps:
       - checkout
@@ -41,8 +45,7 @@ jobs:
             pnpm run lint
 
   test:
-    docker:
-      - image: cimg/node:18.16.0-browsers
+    executor: base
 
     steps:
       - checkout
