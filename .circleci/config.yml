@@ -1,13 +1,13 @@
 version: 2.1
 
-jobs:
-  lint:
+executors:
+  base:
     docker:
       - image: cimg/node:18.16.0-browsers
 
+commands:
+  prepare-dependencies:
     steps:
-      - checkout
-
       - restore_cache:
           name: Restore pnpm Package Cache
           keys:
@@ -30,6 +30,15 @@ jobs:
           paths:
             - node_modules
 
+jobs:
+  lint:
+    executor: base
+
+    steps:
+      - checkout
+
+      - prepare-dependencies
+
       - run:
           name: Format Check
           command: |
@@ -40,7 +49,23 @@ jobs:
           command: |
             pnpm run lint
 
+  test:
+    executor: base
+
+    steps:
+      - checkout
+
+      - prepare-dependencies
+
+      - run:
+          name: Run Unit Test
+          command: |
+            pnpm run test -- --ci --runInBand
+
 workflows:
   main:
     jobs:
       - lint
+      - test:
+          requires:
+            - lint
