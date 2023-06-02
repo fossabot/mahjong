@@ -62,6 +62,9 @@ jobs:
           command: |
             pnpm run test -- --ci --runInBand
 
+      - store_test_results:
+          path: ./reports
+
 workflows:
   main:
     jobs:
