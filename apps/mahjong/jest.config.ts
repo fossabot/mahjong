@@ -10,6 +10,19 @@ const config: Config = {
   transform: {
     '^.+\\.(t|j)s$': 'ts-jest',
   },
+  reporters: process.env.CI
+    ? [
+        'default',
+        [
+          'jest-junit',
+          {
+            suiteName: 'mahjong app unit tests',
+            outputDirectory: '../../reports/apps/mahjong',
+            outputName: 'unit-test-results.xml',
+          },
+        ],
+      ]
+    : undefined,
 };
 
 export default config;
