@@ -5,6 +5,7 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'next',
+    'plugin:promise/recommended',
     'plugin:eslint-comments/recommended',
     'turbo',
     'prettier',

@@ -184,6 +184,9 @@ importers:
       eslint-plugin-jsx-a11y:
         specifier: ^6.5.1
         version: 6.7.1(eslint@8.41.0)
+      eslint-plugin-promise:
+        specifier: ^6.1.1
+        version: 6.1.1(eslint@8.41.0)
       eslint-plugin-react:
         specifier: ^7.28.0
         version: 7.28.0(eslint@8.41.0)
@@ -3621,6 +3624,15 @@ packages:
       object.entries: 1.1.6
       object.fromentries: 2.0.6
       semver: 6.3.0
+    dev: false
+
+  /eslint-plugin-promise@6.1.1(eslint@8.41.0):
+    resolution: {integrity: sha512-tjqWDwVZQo7UIPMeDReOpUgHCmCiH+ePnVT+5zVapL0uuHnegBUs2smM13CzOs2Xb5+MHMRFTs9v24yjba4Oig==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^7.0.0 || ^8.0.0
+    dependencies:
+      eslint: 8.41.0
     dev: false
 
   /eslint-plugin-react-hooks@4.6.0(eslint@8.41.0):

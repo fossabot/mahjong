@@ -3,6 +3,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'airbnb-base',
+    'plugin:promise/recommended',
     'plugin:eslint-comments/recommended',
     'prettier',
   ],
