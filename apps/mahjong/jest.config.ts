@@ -2,7 +2,7 @@ import type { Config } from 'jest';
 
 const config: Config = {
   collectCoverageFrom: ['**/*.(t|j)s'],
-  coverageDirectory: '../coverage',
+  coverageDirectory: '../../../coverage/apps/mahjong',
   moduleFileExtensions: ['js', 'json', 'ts'],
   rootDir: 'src',
   testEnvironment: 'node',
