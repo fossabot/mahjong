@@ -1,10 +1,6 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
+  extends: ['eslint:recommended', 'prettier'],
   ignorePatterns: ['.eslintrc.js'],
   env: {
     node: true,
@@ -16,4 +12,15 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
   },
+  overrides: [
+    {
+      files: '**/*.ts',
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:@typescript-eslint/strict',
+        'prettier',
+      ],
+    },
+  ],
 };
