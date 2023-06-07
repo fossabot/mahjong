@@ -6,4 +6,13 @@ module.exports = {
     project: 'tsconfig.json',
     tsconfigRootDir: __dirname,
   },
+  overrides: [
+    {
+      files: 'turbo/**/*.ts',
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+        'import/no-default-export': 'off',
+      },
+    },
+  ],
 };
