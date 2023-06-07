@@ -1,17 +1,17 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
-  parserOptions: {
-    project: 'tsconfig.json',
-  },
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
+  ignorePatterns: ['.eslintrc.js'],
+  parserOptions: {
+    project: 'tsconfig.json',
+  },
   env: {
     node: true,
     jest: true,
   },
-  ignorePatterns: ['.eslintrc.js'],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
