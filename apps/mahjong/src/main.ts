@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core';
+
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -8,4 +9,7 @@ async function bootstrap() {
   await app.listen(port);
 }
 
-bootstrap();
+bootstrap().catch((error) => {
+  // eslint-disable-next-line no-console
+  console.error(error);
+});
