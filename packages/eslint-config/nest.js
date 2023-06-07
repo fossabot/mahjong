@@ -1,9 +1,6 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-  ],
+  extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
   ignorePatterns: ['.eslintrc.js'],
   parserOptions: {
     project: 'tsconfig.json',
