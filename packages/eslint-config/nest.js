@@ -6,12 +6,12 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:regexp/recommended',
     'plugin:eslint-comments/recommended',
+    './+jest.js',
     'prettier',
   ],
   ignorePatterns: ['.eslintrc.js'],
   env: {
     node: true,
-    jest: true,
   },
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
