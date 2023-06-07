@@ -6,6 +6,8 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:regexp/recommended',
     'plugin:eslint-comments/recommended',
+    './libs/variables.js',
+    './libs/imports.js',
     './+jest.js',
     'prettier',
   ],
@@ -18,6 +20,12 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-extraneous-class': [
+      'error',
+      {
+        allowWithDecorator: true,
+      },
+    ],
   },
   overrides: [
     {
@@ -27,6 +35,9 @@ module.exports = {
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:@typescript-eslint/strict',
         'airbnb-typescript/base',
+        './libs/variables.js',
+        './libs/imports.js',
+        './libs/typescript.js',
         'prettier',
       ],
     },
