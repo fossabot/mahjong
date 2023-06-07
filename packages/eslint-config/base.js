@@ -6,6 +6,7 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:regexp/recommended',
     'plugin:eslint-comments/recommended',
+    'turbo',
     './libs/variables.js',
     './libs/imports.js',
     'prettier',
