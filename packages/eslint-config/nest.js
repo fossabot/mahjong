@@ -1,6 +1,6 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
-  extends: ['eslint:recommended', 'prettier'],
+  extends: ['eslint:recommended', 'airbnb-base', 'prettier'],
   ignorePatterns: ['.eslintrc.js'],
   env: {
     node: true,
@@ -19,6 +19,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:@typescript-eslint/strict',
+        'airbnb-typescript/base',
         'prettier',
       ],
     },

@@ -1,6 +1,13 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
-  extends: ['eslint:recommended', 'next', 'turbo', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'airbnb',
+    'airbnb/hooks',
+    'next',
+    'turbo',
+    'prettier',
+  ],
   parserOptions: {
     babelOptions: {
       presets: [require.resolve('next/babel')],
@@ -16,6 +23,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:@typescript-eslint/strict',
+        'airbnb-typescript',
         'prettier',
       ],
     },
