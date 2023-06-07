@@ -1,6 +1,6 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
-  extends: ['next', 'turbo', 'prettier'],
+  extends: ['eslint:recommended', 'next', 'turbo', 'prettier'],
   parserOptions: {
     babelOptions: {
       presets: [require.resolve('next/babel')],
