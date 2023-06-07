@@ -2,4 +2,8 @@
 module.exports = {
   root: true,
   extends: ['@mahjong'],
+  parserOptions: {
+    project: 'tsconfig.json',
+    tsconfigRootDir: __dirname,
+  },
 };

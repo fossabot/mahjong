@@ -1,6 +1,19 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
-  extends: ['next', 'turbo', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'airbnb',
+    'airbnb/hooks',
+    'next',
+    'plugin:promise/recommended',
+    'plugin:regexp/recommended',
+    'plugin:eslint-comments/recommended',
+    'turbo',
+    './libs/variables.js',
+    './libs/imports.js',
+    './libs/react.js',
+    'prettier',
+  ],
   parserOptions: {
     babelOptions: {
       presets: [require.resolve('next/babel')],
@@ -9,4 +22,40 @@ module.exports = {
   rules: {
     '@next/next/no-html-link-for-pages': 'off',
   },
+  overrides: [
+    {
+      files: '**/*.ts?(x)',
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:@typescript-eslint/strict',
+        'airbnb-typescript',
+        './libs/variables.js',
+        './libs/imports.js',
+        './libs/typescript.js',
+        './libs/react.js',
+        'prettier',
+      ],
+      rules: {
+        // Use TypeScript instead of prop types.
+        'react/prop-types': 'off',
+
+        // Use default value with destructuring assignment instead of
+        // `defaultProps`.
+        'react/require-default-props': 'off',
+      },
+    },
+    {
+      files: [
+        'src/app/**/@(page|layout|template|loading|error|global-error|no-found).tsx',
+        'app/**/@(page|layout|template|loading|error|global-error|no-found).tsx',
+        'src/pages/**/*.tsx',
+        'pages/**/*.tsx',
+      ],
+      rules: {
+        'import/prefer-default-export': 'error',
+        'import/no-default-export': 'off',
+      },
+    },
+  ],
 };
