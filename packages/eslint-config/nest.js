@@ -1,6 +1,11 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
-  extends: ['eslint:recommended', 'airbnb-base', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'airbnb-base',
+    'plugin:eslint-comments/recommended',
+    'prettier',
+  ],
   ignorePatterns: ['.eslintrc.js'],
   env: {
     node: true,
