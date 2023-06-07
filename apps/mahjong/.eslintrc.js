@@ -6,4 +6,17 @@ module.exports = {
     project: 'tsconfig.json',
     tsconfigRootDir: __dirname,
   },
+  overrides: [
+    {
+      files: 'test/**/*.ts',
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+
+        'jest/expect-expect': [
+          'error',
+          { assertFunctionNames: ['expect', 'request.**.expect'] },
+        ],
+      },
+    },
+  ],
 };
