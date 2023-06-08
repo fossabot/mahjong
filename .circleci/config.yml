@@ -60,10 +60,13 @@ jobs:
       - run:
           name: Run Unit Test
           command: |
-            pnpm run test -- --ci --runInBand
+            pnpm run test -- --ci --runInBand --coverage
 
       - store_test_results:
           path: ./reports
+
+      - store_artifacts:
+          path: ./coverage
 
 workflows:
   main:
