@@ -60,5 +60,12 @@ module.exports = {
         'import/no-default-export': 'off',
       },
     },
+    {
+      files: ['*.stories.@(ts|tsx|js|jsx|mjs|cjs)'],
+      rules: {
+        'import/prefer-default-export': 'error',
+        'import/no-default-export': 'off',
+      },
+    },
   ],
 };
