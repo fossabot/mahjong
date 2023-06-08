@@ -16,6 +16,8 @@
   "devDependencies": {
     "@mahjong/eslint-config": "workspace:*",
     "@mahjong/tsconfig": "workspace:*",
+    "@storybook/react": "^7.0.18",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "29.5.2",
