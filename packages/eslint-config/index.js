@@ -68,6 +68,10 @@ module.exports = {
       rules: {
         'import/prefer-default-export': 'error',
         'import/no-default-export': 'off',
+
+        'react/jsx-props-no-spreading': 'off',
+
+        'storybook/no-title-property-in-meta': 'off',
       },
     },
   ],
