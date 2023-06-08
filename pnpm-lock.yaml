@@ -231,6 +231,13 @@ importers:
   packages/tsconfig: {}
 
   packages/ui:
+    dependencies:
+      next:
+        specifier: ^13.4.1
+        version: 13.4.1(@babel/core@7.22.1)(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
     devDependencies:
       '@mahjong/eslint-config':
         specifier: workspace:*
@@ -238,18 +245,36 @@ importers:
       '@mahjong/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
+      '@testing-library/jest-dom':
+        specifier: ^5.16.5
+        version: 5.16.5
+      '@testing-library/react':
+        specifier: ^14.0.0
+        version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@types/jest':
+        specifier: 29.5.2
+        version: 29.5.2
       '@types/react':
         specifier: ^18.2.0
         version: 18.2.5
       '@types/react-dom':
         specifier: ^18.2.0
         version: 18.2.3
+      '@types/testing-library__jest-dom':
+        specifier: ^5.14.6
+        version: 5.14.6
       eslint:
         specifier: ^8.41.0
         version: 8.41.0
-      react:
-        specifier: ^17.0.2
-        version: 17.0.2
+      jest:
+        specifier: 29.5.0
+        version: 29.5.0(@types/node@17.0.45)(ts-node@10.9.1)
+      jest-environment-jsdom:
+        specifier: ^29.5.0
+        version: 29.5.0
+      jest-junit:
+        specifier: ^16.0.0
+        version: 16.0.0
       typescript:
         specifier: ^4.5.2
         version: 4.9.5
@@ -5175,7 +5200,7 @@ packages:
       pretty-format: 29.5.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@17.0.45)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.0.4)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6103,6 +6128,7 @@ packages:
   /nanoid@3.3.6:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
     dev: false
 
   /natural-compare-lite@1.4.0:
@@ -6714,14 +6740,6 @@ packages:
 
   /react-is@18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
-    dev: true
-
-  /react@17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: true
 
   /react@18.2.0:
