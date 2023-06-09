@@ -7,6 +7,9 @@ module.exports = {
     'next',
     'plugin:testing-library/react',
     'plugin:jest-dom/recommended',
+    'plugin:storybook/recommended',
+    'plugin:storybook/csf-strict',
+    'plugin:storybook/addon-interactions',
     'plugin:promise/recommended',
     'plugin:regexp/recommended',
     'plugin:eslint-comments/recommended',
@@ -58,6 +61,17 @@ module.exports = {
       rules: {
         'import/prefer-default-export': 'error',
         'import/no-default-export': 'off',
+      },
+    },
+    {
+      files: ['*.stories.@(ts|tsx|js|jsx|mjs|cjs)'],
+      rules: {
+        'import/prefer-default-export': 'error',
+        'import/no-default-export': 'off',
+
+        'react/jsx-props-no-spreading': 'off',
+
+        'storybook/no-title-property-in-meta': 'off',
       },
     },
   ],
