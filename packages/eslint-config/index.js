@@ -5,6 +5,8 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'next',
+    'plugin:testing-library/react',
+    'plugin:jest-dom/recommended',
     'plugin:promise/recommended',
     'plugin:regexp/recommended',
     'plugin:eslint-comments/recommended',
@@ -12,6 +14,7 @@ module.exports = {
     './libs/variables.js',
     './libs/imports.js',
     './libs/react.js',
+    './+jest.js',
     'prettier',
   ],
   parserOptions: {
