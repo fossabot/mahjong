@@ -9,6 +9,7 @@
     "lint": "next lint",
     "start": "next start",
     "storybook": "storybook dev -p 6006",
+    "stylelint": "stylelint \"**/*.scss\"",
     "test": "jest"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@mahjong/eslint-config": "workspace:*",
+    "@mahjong/stylelint-config": "workspace:*",
     "@mahjong/tsconfig": "workspace:*",
     "@storybook/addon-a11y": "^7.0.18",
     "@storybook/addon-essentials": "^7.0.18",
@@ -41,6 +43,7 @@
     "jest-junit": "^16.0.0",
     "sass": "^1.63.2",
     "storybook": "^7.0.18",
+    "stylelint": "^15.7.0",
     "typescript": "^4.5.3"
   }
 }

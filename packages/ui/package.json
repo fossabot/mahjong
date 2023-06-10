@@ -7,6 +7,7 @@
   "scripts": {
     "generate:component": "turbo gen react-component",
     "lint": "eslint \"**/*.ts*\"",
+    "stylelint": "stylelint \"**/*.scss\"",
     "test": "jest"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "@mahjong/eslint-config": "workspace:*",
+    "@mahjong/stylelint-config": "workspace:*",
     "@mahjong/tsconfig": "workspace:*",
     "@storybook/react": "^7.0.18",
     "@storybook/testing-library": "^0.1.0",
@@ -28,6 +30,7 @@
     "jest": "29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "jest-junit": "^16.0.0",
+    "stylelint": "^15.7.0",
     "typescript": "^4.5.2"
   }
 }

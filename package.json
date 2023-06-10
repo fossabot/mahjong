@@ -8,6 +8,7 @@
     "format:check": "prettier --list-different --ignore-unknown .",
     "lint": "turbo run lint",
     "prepare": "husky install",
+    "stylelint": "turbo run stylelint",
     "test": "turbo run test"
   },
   "devDependencies": {
