@@ -5,6 +5,7 @@
     "unional.vscode-sort-package-json",
     "redhat.vscode-yaml",
     "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
     "mikestead.dotenv",
     "circleci.circleci"
   ]
