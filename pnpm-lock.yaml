@@ -241,6 +241,9 @@ importers:
       eslint-plugin-jest-dom:
         specifier: ^5.0.1
         version: 5.0.1(@testing-library/dom@9.3.0)(eslint@8.41.0)
+      eslint-plugin-jest-extended:
+        specifier: ^2.0.0
+        version: 2.0.0(eslint@8.41.0)(typescript@4.9.5)
       eslint-plugin-jest-formatting:
         specifier: ^3.1.0
         version: 3.1.0(eslint@8.41.0)
@@ -8283,6 +8286,19 @@ packages:
       requireindex: 1.2.0
     dev: false
 
+  /eslint-plugin-jest-extended@2.0.0(eslint@8.41.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-nMhVVsVcG/+Q6FMshql35WBxwx8xlBhxKgAG08WP3BYWfXrp28oxLpJVu9JSbMpfmfKGVrHwMYJGfPLRKlGB8w==}
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+    peerDependencies:
+      eslint: ^7.0.0 || ^8.0.0
+    dependencies:
+      '@typescript-eslint/utils': 5.59.9(eslint@8.41.0)(typescript@4.9.5)
+      eslint: 8.41.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: false
+
   /eslint-plugin-jest-formatting@3.1.0(eslint@8.41.0):
     resolution: {integrity: sha512-XyysraZ1JSgGbLSDxjj5HzKKh0glgWf+7CkqxbTqb7zEhW7X2WHo5SBQ8cGhnszKN+2Lj3/oevBlHNbHezoc/A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -10141,7 +10157,7 @@ packages:
       pretty-format: 29.5.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@17.0.45)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.0.4)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -10258,7 +10274,7 @@ packages:
       jest:
         optional: true
     dependencies:
-      jest: 29.5.0(@types/node@17.0.45)(ts-node@10.9.1)
+      jest: 29.5.0(@types/node@18.16.16)(ts-node@10.9.1)
       jest-diff: 29.5.0
       jest-get-type: 29.4.3
     dev: true
