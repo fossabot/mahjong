@@ -5,8 +5,11 @@
   "editor.formatOnType": true,
   "editor.codeActionsOnSave": {
     "source.sortPackageJson": true,
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
 
-  "eslint.workingDirectories": [{ "mode": "auto" }]
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+
+  "stylelint.validate": ["css", "postcss", "scss"]
 }

@@ -49,6 +49,11 @@ jobs:
           command: |
             pnpm run lint
 
+      - run:
+          name: Run Stylelint
+          command: |
+            pnpm run stylelint
+
   test:
     executor: base
 
