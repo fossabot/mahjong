@@ -1,6 +1,7 @@
 import type { Config } from 'jest';
 
 const config: Config = {
+  setupFilesAfterEnv: ['../jest.setup.ts'],
   collectCoverageFrom: ['**/*.(t|j)s'],
   coverageDirectory: '../../../coverage/apps/mahjong',
   moduleFileExtensions: ['js', 'json', 'ts'],
@@ -10,6 +11,7 @@ const config: Config = {
   transform: {
     '^.+\\.(t|j)s$': 'ts-jest',
   },
+  // eslint-disable-next-line turbo/no-undeclared-env-vars
   reporters: process.env.CI
     ? [
         'default',
