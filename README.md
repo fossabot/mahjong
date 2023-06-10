@@ -1,4 +1,6 @@
 # Turborepo starter
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fm10maeda%2Fmahjong.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fm10maeda%2Fmahjong?ref=badge_shield)
+
 
 This is an official starter Turborepo.
 
@@ -79,3 +81,7 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fm10maeda%2Fmahjong.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fm10maeda%2Fmahjong?ref=badge_large)
