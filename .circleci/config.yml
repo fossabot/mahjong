@@ -47,12 +47,12 @@ jobs:
       - run:
           name: Run Lint
           command: |
-            pnpm run lint
+            pnpm run lint --continue
 
       - run:
           name: Run Stylelint
           command: |
-            pnpm run stylelint
+            pnpm run stylelint --continue
 
   test:
     executor: base
@@ -65,7 +65,7 @@ jobs:
       - run:
           name: Run Unit Test
           command: |
-            pnpm run test -- --ci --runInBand --coverage
+            pnpm run test --continue -- --ci --runInBand --coverage
 
       - store_test_results:
           path: ./reports
